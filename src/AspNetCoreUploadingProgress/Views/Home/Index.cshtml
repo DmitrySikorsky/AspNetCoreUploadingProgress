@@ -1,0 +1,15 @@
+﻿@* Copyright © 2017 Dmitry Sikorsky. All rights reserved. *@
+@* Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information. *@
+@{ 
+  this.ViewBag.Title = "Let’s Upload Something!";
+}
+<h1>Let’s Upload Something!</h1>
+<form id="form" name="form" action="/uploader" enctype="multipart/form-data" method="post">
+  <div class="buttons">
+    <div class="upload-button">
+      <div class="label">Click me!</div>
+      <input id="files" name="files" type="file" size="1" multiple onchange="uploadFiles('files');" />
+    </div>
+  </div>
+</form>
+<div id="progress" class="progress"><div id="bar" class="bar"></div><div id="label" class="label">0%</div></div>
