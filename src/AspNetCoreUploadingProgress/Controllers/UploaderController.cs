@@ -73,7 +73,12 @@ namespace AspNetCoreFileUploading
 
     private string GetPathAndFilename(string filename)
     {
-      return this.hostingEnvironment.WebRootPath + "\\uploads\\" + filename;
+      string path = this.hostingEnvironment.WebRootPath + "\\uploads\\";
+
+      if (!Directory.Exists(path))
+        Directory.CreateDirectory(path);
+
+      return path + filename;
     }
   }
 }
