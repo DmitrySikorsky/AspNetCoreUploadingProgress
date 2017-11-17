@@ -30,7 +30,7 @@ namespace AspNetCoreFileUploading
 
       foreach (IFormFile source in files)
       {
-        string filename = ContentDispositionHeaderValue.Parse(source.ContentDisposition).FileName.Trim('"');
+        string filename = ContentDispositionHeaderValue.Parse(source.ContentDisposition).FileName.ToString().Trim('"');
 
         filename = this.EnsureCorrectFilename(filename);
 
