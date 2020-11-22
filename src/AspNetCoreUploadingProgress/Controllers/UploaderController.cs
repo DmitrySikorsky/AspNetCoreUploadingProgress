@@ -14,9 +14,9 @@ namespace AspNetCoreFileUploading
 {
   public class UploaderController : Controller
   {
-    private IHostingEnvironment hostingEnvironment;
+    private IWebHostEnvironment hostingEnvironment;
 
-    public UploaderController(IHostingEnvironment hostingEnvironment)
+    public UploaderController(IWebHostEnvironment hostingEnvironment)
     {
       this.hostingEnvironment = hostingEnvironment;
     }
